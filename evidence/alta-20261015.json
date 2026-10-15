@@ -1,0 +1,33 @@
+{
+  "fecha": "2026-10-15",
+  "alcance": "Alta documental local; no verifica producto implementado",
+  "sdd_spec": {
+    "rf": 7,
+    "rnf": 4,
+    "pendientes_de_decision": 0,
+    "errores": 0,
+    "avisos": 0
+  },
+  "sdd_tasks": {
+    "tareas": 21,
+    "errores": 0,
+    "avisos": 0,
+    "todos_los_rf_tienen_tareas": true,
+    "tareas_aceptadas": 0
+  },
+  "enlaces_markdown_locales_rotos": 0,
+  "inspeccion": {
+    "rutas_privadas_o_arnes_en_documentos": 0,
+    "claves_reales_en_ejemplo_entorno": 0,
+    "env_bases_claves_y_temporales_ignorados": true,
+    "env_example_versionable": true,
+    "puerto_18310_sin_listener_en_comprobacion_previa": true,
+    "puerto_debe_recomprobarse_antes_de_bind": true
+  },
+  "no_ejecutado": [
+    "Aplicacion Flutter y servidor",
+    "Pruebas de producto y APK",
+    "Modelo de IA real",
+    "Remoto, publicacion y entrega"
+  ]
+}

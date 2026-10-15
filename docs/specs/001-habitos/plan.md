@@ -1,8 +1,14 @@
 # Plan S001 — BtoHabitos
 
-Estado: Propuesta para revisión técnica — 2026-10-15. No se ha iniciado implementación ni se registra aprobación humana del paquete.
+- Estado: Aprobado
+- Aprobado por: Alberto — 2026-10-15 — «Apruebo BtoHabitos, el plan y las tareas»
 
 ## Comprobación contra la constitución
+
+- [x] Identidad original y nivel L definidos en MANIFIESTO y ROADMAP.
+- [x] Tres capas Flutter y servidor separado descritos en arquitectura y contratos.
+- [x] Datos de laboratorio sintéticos y secretos excluidos de fuentes y APK.
+- [x] Propiedad de rutas y autoridad de publicación delimitadas en AGENTS.
 
 Cumple identidad independiente, nivel L/laboratorio, tres capas de Flutter y separación servidor/app. Datos sintéticos, mínimo privilegio, secretos fuera de Git y del APK; no mapas ni integración institucional. Publicación y credenciales permanecen en el coordinador. La arquitectura no copia otra aplicación; reutiliza bibliotecas y patrones de concurrencia conocidos, implementados y probados para este dominio.
 
@@ -46,3 +52,8 @@ Reutilizar bibliotecas de HTTP/validación/criptografía y scripts SDD existente
 ## Recuperación y dependencias externas
 
 Historial real por lote, base de pruebas nueva y separada, sin modificar bases ajenas. Un cambio de esquema tiene migración idempotente y conservación de datos. No reset, purga o sustitución destructiva sin autorización específica. El coordinador conserva decisiones de remoto, configuración de IA, SDK, publicación y entrega; no bloquean el trabajo local que no depende de ellas.
+
+
+## Aprobación del paquete el 15 de octubre de 2026
+
+Alberto aprobó conjuntamente el alcance, el plan y las tareas con la respuesta explícita «Apruebo BtoHabitos, el plan y las tareas». Se autoriza iniciar la construcción local; esta aprobación no registra todavía aceptación de resultados ni publicación de un remoto nuevo.

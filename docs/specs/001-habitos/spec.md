@@ -1,6 +1,7 @@
 # S001 — BtoHabitos
 
-Estado: Propuesta para revisión técnica
+- Estado: Aprobada
+- Aprobada por: Alberto — 2026-10-15 — «Apruebo BtoHabitos, el plan y las tareas»
 Nivel: L — laboratorio personal, con controles de autenticación y concurrencia
 Fecha: 2026-10-15
 Origen: alcance y criterios académicos comunicados por el coordinador el 15 de octubre. Paquete técnico aún sin aceptación final; no se registra una aprobación humana inexistente.
@@ -108,3 +109,8 @@ El coordinador facilita SDK y configuración privada de un modelo real compatibl
 ### Sesión 2026-10-15
 
 Alcance comunicado: aplicación independiente de hábitos/tareas, 21 plantillas desde datos del servidor, cuentas y CRUD aislados, favoritos persistentes, asistente real desde servidor, tres pestañas, CI/APK y documentación. Se propone implementación por lotes L01–L03; revisión del paquete técnico y aceptación de producto aún pendientes. No se marca ningún RF como cumplido.
+
+
+## Aprobación del paquete el 15 de octubre de 2026
+
+Alberto aprobó conjuntamente el alcance, el plan y las tareas con la respuesta explícita «Apruebo BtoHabitos, el plan y las tareas». Se autoriza iniciar la construcción local; esta aprobación no registra todavía aceptación de resultados ni publicación de un remoto nuevo.

@@ -1,6 +1,7 @@
 # Tareas S001 — BtoHabitos
 
-Estado: Propuesta para revisión técnica — 2026-10-15. Todas pendientes; las casillas se cierran solo con evidencia. La misma corrida puede acreditar varias tareas. Propiedad de rutas por encargo; no revertir trabajo ajeno.
+- Estado: Aprobado
+- Aprobado por: Alberto — 2026-10-15 — «Apruebo BtoHabitos, el plan y las tareas»
 
 ## L01 — Cuenta, catálogo y CRUD
 
@@ -31,3 +32,8 @@ Estado: Propuesta para revisión técnica — 2026-10-15. Todas pendientes; las 
 - [ ] T19 (RF-01, RF-02, RF-03, RF-04, RF-05, RF-06, RNF-02, RNF-04) Ejecutar aceptación integrada y registrar `evidence/l03/resultado.json`. Evidencia esperada: suites/análisis verdes y recorrido real de dos cuentas con DB, persistencia, proveedor y pruebas de carreras controladas; no repetir suites concurrentemente.
 - [ ] T20 (RF-07, RNF-03, RNF-04) Capturar UI y verificar APK en `evidence/l03/capturas/`, `evidence/l03/apk.json`. Evidencia esperada: APK release instalado, relanzado y recorrido documentado; capturas de la versión exacta sin credenciales.
 - [ ] T21 (RF-07, RNF-01, RNF-04) Completar matriz/hito y preparar entrega en `docs/specs/001-habitos/verificacion.md`, `docs/hitos/2026-10-15-producto-validado.md`. Evidencia esperada: RF→casos→resultados→commit, límites explícitos y enlace de release; publicación/envío solo por coordinador con destino autorizado.
+
+
+## Aprobación del paquete el 15 de octubre de 2026
+
+Alberto aprobó conjuntamente el alcance, el plan y las tareas con la respuesta explícita «Apruebo BtoHabitos, el plan y las tareas». Se autoriza iniciar la construcción local; esta aprobación no registra todavía aceptación de resultados ni publicación de un remoto nuevo.

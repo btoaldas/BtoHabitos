@@ -1,0 +1,27 @@
+{
+  "entorno": "Flutter web real, fuentes R2 del commit 9ffd795",
+  "capturas": [
+    {
+      "archivo": "r2-favorito-restaurado.png",
+      "bytes": 22314,
+      "sha256": "e41a032ae9ec19a58690cae5c6ab3fb88beb7aade12cf5c422ac6b22d6857676"
+    },
+    {
+      "archivo": "r2-habitos-restaurados.png",
+      "bytes": 43539,
+      "sha256": "a4c38730e838134f7da362667104c59a786a64e2d1ab19ea55836b8da5647721"
+    },
+    {
+      "archivo": "r2-asistente-consejo-real.png",
+      "bytes": 48092,
+      "sha256": "80fff96a29867378cec98e233c6b31913b8a47104444f32675b1fc0148bd38ff"
+    },
+    {
+      "archivo": "r2-aislamiento-cuenta-b.png",
+      "bytes": 22228,
+      "sha256": "3bd04bf0fe09e49af4a686397806dedc06b8dc71a48185c434963646e3733317"
+    }
+  ],
+  "incluye_credenciales": false,
+  "no_acredita": "Instalación Android ni CI remota"
+}

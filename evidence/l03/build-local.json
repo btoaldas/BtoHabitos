@@ -1,0 +1,38 @@
+{
+  "fecha_local": "2026-10-15",
+  "estado": "Compilación y prueba nativa locales verificadas; APK público de CI pendiente",
+  "fuentes_commit": "9ffd795deef718901556191c8a6c66583df3c607",
+  "flutter": "3.47.6",
+  "dart": "3.13.5",
+  "analisis_incidencias": 0,
+  "pruebas_flutter": 92,
+  "pruebas_servidor": 160,
+  "pruebas_auxiliares": 8,
+  "formato_cambios": 0,
+  "apk_local": {
+    "ruta_relativa": "build/app/outputs/flutter-apk/app-release.apk",
+    "bytes": 53853576,
+    "sha256": "6555d808f37f8355aea77862c29d381e64f2254fdad4075d4b8f930e5bfb54f8",
+    "package": "com.bto.habitos",
+    "version_code": "1",
+    "version_name": "1.0.0",
+    "api_base": "http://10.0.2.2:18310",
+    "api_en_tres_abis": [
+      "lib/arm64-v8a/libapp.so",
+      "lib/armeabi-v7a/libapp.so",
+      "lib/x86_64/libapp.so"
+    ],
+    "firma_valida": true,
+    "firma_uso": "Depuracion academica, conforme a configuracion del proyecto",
+    "cert_sha256": "ffc3688f2652ae9f0b00e8665b8c128084757926bafba9784d9057b1dbdc915d",
+    "zip_crc": "PASS"
+  },
+  "privacidad": {
+    "archivos_secretos_en_apk": [],
+    "patrones_clave_detectados": [],
+    "URI_compilacion_privada_presente_en_3_ABI": true,
+    "apk_local_para_publicacion": false,
+    "entrega_prevista": "APK construido por Actions en un runner limpio; pendiente de comprobar"
+  },
+  "instalacion": "evidence/l03/resultado-android-local.json"
+}

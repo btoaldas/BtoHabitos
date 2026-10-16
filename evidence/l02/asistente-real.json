@@ -1,0 +1,62 @@
+{
+  "fecha_local": "2026-10-15",
+  "estado": "asistente real validado localmente; entrega final pendiente de CI, APK final CI y Moodle",
+  "api": {
+    "primera_pasada": {
+      "http": 502,
+      "error_legible": true,
+      "altas_antes": 0,
+      "altas_despues": 0,
+      "causa": "no determinada",
+      "mutaciones": 0
+    },
+    "segunda_pasada": {
+      "respuestas_http_200": 2,
+      "tipos": [
+        "consejo",
+        "propuesta"
+      ],
+      "habitos_antes": 0,
+      "habitos_despues": 0,
+      "sin_escritura": true
+    },
+    "fuentes": [
+      "evidence/l02/asistente-real-api.json",
+      "evidence/l02/asistente-real-api-segunda-pasada.json"
+    ]
+  },
+  "ui_web_r2": {
+    "fuente": "evidence/l02/propuesta-temporal-r2.json",
+    "cancelar_altas": 0,
+    "confirmar_altas": 1,
+    "fixture_creado_y_eliminado": {
+      "id": 3,
+      "titulo": "Ensayo temporal R2",
+      "eliminacion_confirmada_en_ui": true
+    },
+    "habitos_originales_antes_y_despues": 2,
+    "originales_identicos": true,
+    "completados_finales": 1,
+    "alcance_eliminacion": "solo el fixture temporal nuevo de esta operación anunciada",
+    "momento_recibo_local": "2026-10-15T20:04:37-05:00"
+  },
+  "ui_android": {
+    "fuente": "evidence/l03/resultado-android-local.json",
+    "consejo_real_visible": true,
+    "altas_por_consejo": 0,
+    "limite": "status HTTP de la petición UI no consignado"
+  },
+  "limites": [
+    "el 502 no tiene causa determinada",
+    "no se infiere relación entre consultas API y UI",
+    "el APK local no es publicable; requiere compilación CI limpia"
+  ],
+  "pendientes": [
+    "CI remota",
+    "APK final CI limpio, descargable y verificable",
+    "entrega Moodle"
+  ],
+  "modelo_ui_web_r2": "glm-4.5-air",
+  "proveedor_api": "https://api.z.ai/api/paas/v4",
+  "observacion_posterior": "La variación posterior del hábito sintético ID 2 (20:06:26) está en investigación y registrada en L01; no altera el recibo de esta operación ni permite atribuir causa."
+}

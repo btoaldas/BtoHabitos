@@ -1,0 +1,106 @@
+{
+  "estado": "PASS",
+  "fecha_hora_ecuador": "2026-10-15T20:03:21.497608-05:00",
+  "paquete": "com.bto.habitos",
+  "dispositivo": "emulator-5558; Android 16/API 36, ARM64",
+  "procedencia_apk": {
+    "archivo": "build/app/outputs/flutter-apk/app-release.apk",
+    "bytes": 53853576,
+    "sha256": "6555d808f37f8355aea77862c29d381e64f2254fdad4075d4b8f930e5bfb54f8",
+    "origen": "Compilación local indicada por el coordinador, commit9ffd795; instalada previamente sin-r por el coordinador.",
+    "paquete": "package: name='com.bto.habitos' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'"
+  },
+  "apk_instalado_igual_al_local": true,
+  "metodo": "SDK adb/UIAutomator, nodos UI actuales, XML por stdout saneado antes de guardar y capturas nativas. Sin lectura de JWT/proveedor ni datos privados de la app.",
+  "pruebas": {
+    "login_cuenta_A": true,
+    "login_cuenta_B": true,
+    "catalogo_tarjetas_unicas_reales": 21,
+    "catalogo_paginas_recorridas": 5,
+    "favorito_local_nuevo_A": "Pausa de respiración",
+    "filtro_favoritos_A": 1,
+    "sesion_y_favorito_persisten_entre_procesos": true,
+    "mis_habitos_A_antes_consejo": {
+      "total": 2,
+      "completados": 1
+    },
+    "consulta_consejo_asistente": "Respuesta recibida en UI; proveedor real previamente comprobado por el coordinador. No se leyó configuración del proveedor.",
+    "respuesta_consejo": "Usa un cronograma semanal para asignar bloques de tiempo específicos para cada materia y revisa al final del día lo cumplido.",
+    "propuestas_confirmadas": 0,
+    "habitos_creados_editados_eliminados_por_esta_prueba": 0,
+    "mis_habitos_A_despues_consejo": {
+      "total": 2,
+      "completados": 1
+    },
+    "cuenta_B": {
+      "habitos": 0,
+      "favoritos": 0,
+      "consulta_respuesta_A_ausentes": true
+    },
+    "retorno_A": {
+      "habitos": 2,
+      "completados": 1,
+      "favoritos": 1,
+      "mismas_tarjetas_originales": true
+    },
+    "errores_logcat_app": 0
+  },
+  "conservacion": [
+    "No se instaló, reinstaló, desinstaló ni reemplazó ninguna aplicación durante esta prueba.",
+    "No se tocó com.bto.exploraec ni se reinició ADB/emulador.",
+    "No se crearon, editaron ni eliminaron hábitos; solo se agregó un favorito local nuevo.",
+    "Sin cambios de fuentes, Git, servicios, GitHub, Moodle ni WhatsApp."
+  ],
+  "limites": [
+    "APK de compilación local: no es todavía evidencia de un artefacto generado por Actions.",
+    "Prueba en emulador, sin dispositivo físico ni publicación de tienda.",
+    "La consulta Android demuestra respuesta en la UI; la atribución del proveedor se complementa con la evidencia del coordinador."
+  ],
+  "capturas": [
+    {
+      "archivo": "02-catalogo-A.png",
+      "sha256": "6475f5650352d56a390906b7a7cb20246f8a2c6b5e8ebfa504c2a2419e97ac28"
+    },
+    {
+      "archivo": "07-A-favorito-persistente.png",
+      "sha256": "1fe8cf033599100748e773c65705fed4c6ad2a206613372aa875f356d3fc61d6"
+    },
+    {
+      "archivo": "10-asistente-final.png",
+      "sha256": "14539ff95888cbdc3769f02c8f5c9b7e25f0bf897b533379190d44e3f3af5b4e"
+    },
+    {
+      "archivo": "11-habitos-A-tras-consejo.png",
+      "sha256": "35820306f19a5f759e08048f5ccc65c09e5e6811da1f7c19372d1a223119fbaa"
+    },
+    {
+      "archivo": "17-favoritos-B-vacios.png",
+      "sha256": "13fa26429c6b6c30881beb248fd212c1b82b9309ab1f97dbfd65981aef1e619a"
+    },
+    {
+      "archivo": "18-habitos-B-vacios.png",
+      "sha256": "80f1b9a080cf413638c24882f9726bc59527509bf0fcc9d2a75da3bca2d1bad9"
+    },
+    {
+      "archivo": "19-asistente-B-sin-A.png",
+      "sha256": "a17b7e41d6cb02738e47419b70f2d7d038a3451191ff4ecdb8a38196b00d060a"
+    },
+    {
+      "archivo": "22-favorito-A-recuperado.png",
+      "sha256": "59a00e7cd7d695e1fff0d33af85201d8cab3db11014f811296175b5e44dabc3a"
+    },
+    {
+      "archivo": "23-habitos-A-retorno.png",
+      "sha256": "b5ec14ca0c9f38567033665d4f901a645565e478a3049627d64cc228fb013bce"
+    }
+  ],
+  "cierre_ui_hora_ecuador": "2026-10-15T20:02:39.501951-05:00",
+  "privacidad_evidencias": {
+    "estado": "PASS",
+    "archivos_verificados": 68,
+    "sin_credenciales_fixture": true,
+    "sin_rutas_host_privadas": true,
+    "sin_lectura_JWT_proveedor": true
+  },
+  "nota_cierre": "El coordinador fue avisado después de la captura23 para iniciar otra prueba web. Los conteos nativos corresponden a ese cierre guardado; no se realizaron nuevas lecturas de hábitos."
+}

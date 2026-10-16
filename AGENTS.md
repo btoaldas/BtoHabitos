@@ -1,6 +1,6 @@
 # BtoHabitos — gobernanza del proyecto
 
-Proyecto personal de formación y laboratorio: hábitos y tareas cotidianas. Es una aplicación nueva, independiente de ExploraEC, sin ámbito institucional ni uso productivo autorizado. Estado: alta documental y revisión técnica; todavía no hay aplicación implementada.
+Proyecto personal de formación y laboratorio: hábitos y tareas cotidianas. Es una aplicación nueva, independiente de ExploraEC, sin ámbito institucional ni uso productivo autorizado. Estado al 15 de octubre de 2026: servidor y aplicación construidos; pruebas locales, recorrido web y APK Android real verificados. CI remota, APK público y entrega final todavía pendientes. La matriz de aceptación está en `docs/specs/001-habitos/verificacion.md`.
 
 ## Objetivo y alcance
 
@@ -17,6 +17,8 @@ El servidor de laboratorio escucha en `127.0.0.1:18310`. Android emulado usa `AP
 ## Autoridad, conservación y colaboración
 
 Está autorizada la preparación y construcción local del producto académico. Este repositorio empieza sin remoto. La creación del remoto, su propietario y visibilidad, publicación, entrega en el aula y despliegue externo pertenecen al coordinador y requieren su autoridad concreta; los constructores no los ejecutan.
+
+El 15 de octubre Alberto autorizó expresamente crear y publicar `btoaldas/BtoHabitos` en GitHub, público, con rama `main`, código, historial y APK educativo. El coordinador ejecuta y comprueba esta publicación. Esto no autoriza despliegue de infraestructura ni distribución productiva.
 
 Anunciar toda mutación con alcance, impacto, comprobación y recuperación. No borrar, sobrescribir recursos ajenos, desactivar servicios ni reescribir historia sin aprobación específica. Conservar archivos y datos preexistentes. Una recuperación destructiva necesita autorización aunque esté descrita en un plan. Los ensayos usan directorios temporales ignorados dentro del proyecto; no crear proyectos hermanos.
 
@@ -36,7 +38,7 @@ Reutilizar bibliotecas y procedimientos determinísticos pertinentes; documentar
 
 ## Verificación y ejecución
 
-Los comandos finales se incorporarán y ejecutarán cuando el constructor entregue código; no se afirma que existan ahora. Plan: `flutter analyze`, `flutter test`, pruebas del servidor con `pytest`, build APK release y pruebas de flujo con API y base reales. CI analiza y prueba en un entorno limpio; una etiqueta de versión genera un APK descargable. Los datos y secretos no viajan en el APK.
+Comandos disponibles y ejecutados localmente: `flutter analyze`, `flutter test`, pruebas del servidor con `pytest` y auxiliares con `unittest`. Resultados actuales: análisis sin incidencias, 92 pruebas Flutter, 160 del servidor y 8 de auxiliares aprobadas; UI/API reales con cuentas sintéticas y proveedor de IA real. El APK local se compiló, instaló y relanzó: sesión/favoritos entre procesos y aislamiento A→B→A comprobados. El APK local conserva una URI de compilación privada y permanece fuera de la publicación; el artefacto público se generará en CI limpio. Los flujos de CI y release están preparados y validados sintácticamente; su ejecución remota aún no se ha comprobado. Los datos y secretos no deben viajar en el APK.
 
 No declarar terminado por un build, HTTP 200, una captura o un exit 0. Cada RF exige evidencia y segundo ángulo proporcional: pruebas controladas más recorrido real, consultas de base o persistencia entre procesos. Registrar límites, versiones, comandos y resultados en `evidence/` y en la verificación SDD.
 

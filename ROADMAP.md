@@ -4,20 +4,20 @@ Nivel: L, laboratorio académico personal, con controles adicionales por autenti
 
 ## Ahora
 
-Revisar el paquete técnico `docs/specs/001-habitos/` y los encargos `docs/encargos/`. No hay código de producto ni implementación aceptada. El alta local no autoriza remoto o publicación.
+Completar la publicación y entrega del producto construido y versionado hasta `9ffd795`. Alberto aprobó el paquete S001 y autorizó el remoto público `btoaldas/BtoHabitos`, rama `main`, el 15 de octubre. Servidor, Flutter, favoritos, hábitos privados e IA real ya se comprobaron localmente; análisis sin incidencias, 92 pruebas Flutter, 160 del servidor y 8 auxiliares aprobadas. El APK local pasó instalación, relanzamiento, aislamiento y las tres pestañas. La aceptación final sigue abierta hasta verificar CI remota, APK público y entrega.
 
 ## Siguiente
 
-1. L01: servidor y primera rebanada Flutter, con registro/login, 21 plantillas y CRUD privado.
-2. L02: favoritos entre procesos y asistente real con confirmación y guardas de sesión.
-3. L03: integración, errores, recorridos negativos, CI/APK, README y capturas.
-4. Publicación y entrega por el coordinador tras comprobar destino y autoridad.
+1. Incorporar la evidencia local final y cerrar la matriz S001 solo donde existan pruebas reproducibles.
+2. Publicar el historial en el remoto autorizado, ejecutar CI y generar el APK descargable desde una etiqueta.
+3. Descargar el APK de CI y comprobar hashes, firma, privacidad y recorrido de la versión exacta.
+4. Entregar el enlace de GitHub en CEDIA y comprobar que queda enviado para calificar; después compartir documento y constancia al grupo privado autorizado.
 
 ## Dependencias y decisiones externas
 
-- El coordinador aportará configuración privada del proveedor/modelo de IA; no bloquea construcción ni pruebas determinísticas, sí la aceptación del recorrido real de IA.
-- Flutter/SDK y Android: disponibilidad y validación en el entorno del coordinador; el constructor no reinstala ni cambia el SDK global.
-- Remoto: plataforma, propietario, nombre y visibilidad concretos aún sin resolver para este proyecto. No crear ni publicar por herencia de otro repositorio.
+- El proveedor real está configurado privadamente en el servidor y ya respondió consejos y propuestas; una primera respuesta inválida fue rechazada sin escrituras. Sus credenciales no forman parte del repositorio.
+- Flutter/SDK y Android están disponibles en un entorno aislado; NDK oficial instalado y APK local verificado sin modificar un SDK global.
+- Remoto autorizado expresamente: GitHub `btoaldas/BtoHabitos`, público, rama `main`. Publicación y comprobación por el coordinador.
 - Incorporación al mapa de proyectos y registro durable: se entrega al coordinador la clasificación y el commit basal; no se copia contexto privado a este árbol.
 
 ## Después
@@ -27,5 +27,5 @@ Mejoras opcionales solo tras cerrar la entrega: recordatorios, estadísticas his
 <!-- sdd:indice:inicio -->
 | Spec | Estado | Lotes |
 |---|---|---|
-| [001 Hábitos](docs/specs/001-habitos/spec.md) | Propuesta para revisión técnica | L01–L03 |
+| [001 Hábitos](docs/specs/001-habitos/spec.md) | Aprobada; construcción local verificada, aceptación final en curso | L01–L03 |
 <!-- sdd:indice:fin -->

@@ -2,7 +2,7 @@
 
 Aplicación original de formación personal para convertir hábitos y tareas cotidianas en una rutina propia. Es independiente de ExploraEC y no está autorizada para uso institucional o productivo.
 
-**Estado, 15 de octubre de 2026:** la app Flutter y el servidor están construidos localmente e integrados en `main` según el historial del repositorio. La validación conjunta de aceptación, el proveedor real configurado por el coordinador, CI remota, APK publicado, capturas finales y aceptación del producto siguen pendientes. La aprobación del plan no equivale a aceptar resultados. Este repositorio aún no tiene remoto.
+**Estado, 15 de octubre de 2026:** la app Flutter y el servidor están construidos e integrados en `main`. Análisis sin incidencias, 92 pruebas Flutter, 160 del servidor y 8 de auxiliares aprobadas. El recorrido web/API real comprobó catálogo, hábitos privados, favoritos, persistencia, dos cuentas y un proveedor de IA real configurado privadamente. El APK local pasó instalación, relanzamiento y aislamiento A→B→A; se verificaron 21 tarjetas y las tres pestañas. Alberto autorizó GitHub `btoaldas/BtoHabitos`, público, rama `main`; publicación, CI remota, APK público y aceptación final siguen en preparación.
 
 ## Qué incluye
 
@@ -94,9 +94,19 @@ CI corre las pruebas del servidor, auxiliares, análisis Flutter y pruebas Flutt
 
 ## Validación y límites
 
-La existencia de código no acredita por sí sola el recorrido completo. El coordinador debe completar análisis y suites, prueba integrada UI/API/SQLite con cuentas sintéticas, persistencia entre procesos, aislamiento A/B y casos de sesión obsoleta; la aceptación del asistente requiere proveedor real configurado de forma privada. Las suites automáticas sin credencial no acreditan IA real. Capturas reales de la versión final se añadirán después de esa validación; no se incluyen imágenes ficticias.
+La verificación local incluye UI/API/SQLite con cuentas sintéticas, persistencia entre procesos, aislamiento A/B y regresiones de sesión obsoleta. La IA real respondió consejos y propuestas: cancelar conservó los registros y confirmar creó uno. Una primera respuesta inválida del proveedor produjo un error legible y ninguna escritura; no se determinó su campo inválido. En R2 se comprobó también propuesta real, cancelación sin altas, confirmación de una alta temporal y eliminación confirmada únicamente de ese registro nuevo; los dos originales quedaron idénticos. El APK local conservó sesión y favorito en un proceso nuevo y pasó A→B→A, con A2/B0 y un consejo real visible. Las suites con respuestas simuladas no se presentan como prueba del modelo real.
+
+El APK local de prueba conserva una URI de compilación privada en sus tres ABI y no se publicará. El APK descargable se construirá con Actions en un runner limpio y se verificará por separado. Evidencia: [build local](evidence/l03/build-local.json), [recorrido Android](evidence/l03/resultado-android-local.json) y [ensayo temporal R2](evidence/l02/propuesta-temporal-r2.json).
 
 Referencias de ejecución: [evidencia](evidence/README.md), [plan](docs/specs/001-habitos/plan.md), [tareas](docs/specs/001-habitos/tasks.md) y [encargo de integración](docs/encargos/03-integracion-entrega.md). El lote CI/documentación/herramientas no ha sido aún aceptado por el coordinador.
+
+Capturas del recorrido web real con R2; no sustituyen la prueba Android pendiente. Sus bytes y hashes están en el [manifiesto de capturas](evidence/l02/capturas-web/manifiesto.json).
+
+![Hábitos propios restaurados después de relanzar la aplicación](evidence/l02/capturas-web/r2-habitos-restaurados.png)
+
+![Consejo de un modelo real solicitado desde la aplicación](evidence/l02/capturas-web/r2-asistente-consejo-real.png)
+
+También se comprobaron el [favorito restaurado](evidence/l02/capturas-web/r2-favorito-restaurado.png) y la [cuenta B vacía](evidence/l02/capturas-web/r2-aislamiento-cuenta-b.png).
 
 ## Créditos y licencias
 

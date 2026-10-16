@@ -1,0 +1,74 @@
+{
+  "fecha_local": "2026-10-15",
+  "estado": "local funcional verificado; entrega final pendiente de CI, APK final CI y Moodle",
+  "fuentes_commit": "9ffd795deef718901556191c8a6c66583df3c607",
+  "suites_reportadas": {
+    "servidor": "160/160",
+    "flutter": "92/92",
+    "helpers": "8/8",
+    "focales": "22/22",
+    "analisis_flutter_hallazgos": 0
+  },
+  "android_nativo": {
+    "fuente": "evidence/l03/resultado-android-local.json",
+    "estado": "PASS",
+    "dispositivo": "Android 16/API 36 ARM64",
+    "paquete": "com.bto.habitos",
+    "apk_bytes": 53853576,
+    "apk_sha256": "6555d808f37f8355aea77862c29d381e64f2254fdad4075d4b8f930e5bfb54f8",
+    "catalogo_tarjetas_unicas": 21,
+    "pantallas_catalogo": 5,
+    "persistencia_sesion_favorito_dos_procesos": {
+      "pid_1": 6642,
+      "pid_2": 7028,
+      "procedencia": "reporte del coordinador; no se leyó JWT"
+    },
+    "cuenta_a_antes_y_despues": {
+      "habitos": 2,
+      "completados": 1,
+      "favoritos": 1
+    },
+    "cuenta_b": {
+      "habitos": 0,
+      "favoritos": 0,
+      "respuesta_a_ausente": true
+    },
+    "consejo_real_visible": true,
+    "altas_por_consejo": 0,
+    "errores_logcat": 0
+  },
+  "api": {
+    "primera_pasada": "HTTP 502 legible; cero mutaciones; causa no determinada",
+    "segunda_pasada": "dos HTTP 200 (consejo y propuesta), cero escrituras"
+  },
+  "apk_local": {
+    "publicable": false,
+    "hallazgo": "URI de compilación privada detectada en tres ABI",
+    "accion": "usar APK construido por CI limpia",
+    "fuente": "evidence/l03/build-local.json"
+  },
+  "pendientes": [
+    "CI remota",
+    "APK final de CI limpio, descargable y verificable",
+    "entrega Moodle"
+  ],
+  "publicacion_repositorio": {
+    "url": "https://github.com/btoaldas/BtoHabitos",
+    "visibilidad": "público",
+    "autorizacion": "explícita de Alberto",
+    "remoto_creado": true,
+    "push": "pendiente"
+  },
+  "observacion_posterior": {
+    "fecha_local": "2026-10-15T20:06:26-05:00",
+    "habito_sintetico_id": 2,
+    "cambio": "completado false→true",
+    "conteos_api_posteriores": {
+      "habitos": 2,
+      "completados": 2
+    },
+    "causa": "en investigación; no se atribuye bug",
+    "recibos_historicos": "Android 20:02:39: 2/1; web fixture 20:04:37: dos originales idénticos y 1 completado; sin modificaciones retrospectivas",
+    "capturas_android": "PNG originales, sin recorte, según revisión independiente reportada"
+  }
+}

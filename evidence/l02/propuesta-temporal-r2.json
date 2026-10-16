@@ -1,0 +1,16 @@
+{
+  "fecha_utc": "2026-10-16T01:04:37.666515+00:00",
+  "fuentes_commit": "9ffd795deef718901556191c8a6c66583df3c607",
+  "proveedor_real": "glm-4.5-air",
+  "ui": "Flutter web R2 real",
+  "cancelar_propuesta_altas": 0,
+  "confirmar_propuesta_altas": 1,
+  "temporal_creado_y_eliminado_id": 3,
+  "temporal_titulo": "Ensayo temporal R2",
+  "eliminacion_ui_confirmada": true,
+  "habitos_antes": 2,
+  "habitos_despues": 2,
+  "originales_identicos_por_contenido": true,
+  "completados_finales": 1,
+  "alcance": "Solo el registro temporal nuevo creado dentro de esta operación anunciada; ningún hábito preexistente eliminado"
+}

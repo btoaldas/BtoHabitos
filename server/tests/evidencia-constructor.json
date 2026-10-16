@@ -1,0 +1,180 @@
+{
+  "tipo": "evidencia del constructor; no aceptación SDD ni integración",
+  "recorded_at_utc": "2026-10-15T23:58:50.198677+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "system": "Darwin",
+    "machine": "arm64",
+    "packages": {
+      "PyJWT": "2.15.1",
+      "Pygments": "2.21.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "certifi": "2026.7.22",
+      "click": "8.5.0",
+      "dnspython": "2.9.0",
+      "email-validator": "2.3.0",
+      "fastapi": "0.143.2",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "idna": "3.20",
+      "iniconfig": "2.3.1",
+      "opentelemetry-api": "1.45.1",
+      "packaging": "26.3",
+      "pluggy": "1.7.0",
+      "pydantic": "2.14.1",
+      "pydantic_core": "2.50.1",
+      "pytest": "9.1.1",
+      "starlette": "1.8.0",
+      "typing-inspection": "0.4.4",
+      "typing_extensions": "4.16.0",
+      "uvicorn": "0.54.0"
+    }
+  },
+  "scope": "Solo rutas autorizadas de server/; entornos y fixtures retenidos e ignorados",
+  "clean_install": {
+    "venv": "tests/.runs/clean-env-fc0c96ff17b14a839c64c54ae343bd8c",
+    "command": [
+      "tests/.runs/clean-env-fc0c96ff17b14a839c64c54ae343bd8c/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-cache-dir",
+      "--require-hashes",
+      "-r",
+      "requirements.lock"
+    ],
+    "exit_code": 0,
+    "packages": 25,
+    "check_command": [
+      "tests/.runs/clean-env-fc0c96ff17b14a839c64c54ae343bd8c/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "check_output": "No broken requirements found."
+  },
+  "clean_suite": {
+    "command": [
+      "tests/.runs/clean-env-fc0c96ff17b14a839c64c54ae343bd8c/bin/python",
+      "-m",
+      "pytest",
+      "--basetemp=tests/.runs/validated-d10c2ea1216744cb8ff9c82d82e1db78/fixtures",
+      "--junitxml=tests/.runs/validated-d10c2ea1216744cb8ff9c82d82e1db78/pytest.xml"
+    ],
+    "exit_code": 0,
+    "tests": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 23.626
+  },
+  "final_suite": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest"
+    ],
+    "exit_code": 0,
+    "tests": 160,
+    "passed": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 23.28
+  },
+  "canary": {
+    "command": [
+      ".venv/bin/python",
+      "tests/tools/check_auth_canary.py"
+    ],
+    "exit_code": 0,
+    "injected_fault": "Bypass token_user_id solo en memoria del proceso canario",
+    "observed": "1 failed, 44 deselected: assert 200 == 401",
+    "result": "CANARIO CORRECTO; detecta firma inválida con usuario existente; no cambia fuentes"
+  },
+  "fixture_guard": {
+    "observed_pytest_exit_code": 4,
+    "observed_message": "No se reutiliza ni purga --basetemp existente; indique una ruta nueva",
+    "effect": "Marcador sintético preexistente conservado byte a byte"
+  },
+  "coverage_observed": [
+    "Registro/login/me, normalización/duplicado, scrypt distinto entre usuarios con la misma contraseña, firma/algoritmo/expiración/claims JWT",
+    "401 por ausencia/manipulación/expiración contra usuarios existentes en todas las rutas protegidas; 404 propio ausente/ajeno; 422 campos extra/user_id y coerciones",
+    "21 plantillas/IDs, semilla dos veces, cambios del catálogo visibles; FK/índice/constraints y rollback de transacciones inválidas",
+    "CRUD completo y aislamiento A/B; persistencia en tres procesos independientes sin perder B; proceso Uvicorn por socket loopback real",
+    "MockTransport HTTPX inspecciona parámetros exactos, extensión thinking activada/desactivada, agregado autorizado y minimización; respuestas distintas cambian el resultado",
+    "Salida IA noJSON/extra/acción desconocida/ambigua/truncada/oversize; timeout total y por red/cancelación/caída; ninguna tabla cambia por el asistente",
+    "Errores API saneados, logs sin contenido privado sintético y CORS local explícito"
+  ],
+  "contract_decisions": {
+    "entrypoint": "uvicorn app.main:create_app --factory --host 127.0.0.1 --port 18310 --no-access-log",
+    "ttl": "JWT_EXPIRES_SECONDS canónico; TOKEN_TTL_SECONDS legado solo si el canónico está ausente",
+    "seed": "INSERT ON CONFLICT(id) DO NOTHING; no sobrescribe catálogo/hábitos existentes; rechaza IDs ajenos sin purgar",
+    "errors": "detail textual sin input/excepciones; status del contrato conservados",
+    "proposal": "Respuesta tipada estricta; guardar solo mediante POST /habitos posterior del cliente"
+  },
+  "coordinator_private_variables": [
+    "DB_PATH",
+    "JWT_SECRET",
+    "JWT_EXPIRES_SECONDS",
+    "OPENAI_BASE_URL",
+    "OPENAI_API_KEY",
+    "OPENAI_MODEL"
+  ],
+  "optional_server_variables": [
+    "ALLOWED_ORIGINS",
+    "OPENAI_TIMEOUT_SECONDS",
+    "OPENAI_DISABLE_THINKING"
+  ],
+  "private_sources_read": [],
+  "external_activity": "Solo consulta pública de versiones/hashes PyPI; sin proveedor real, servidores ajenos, remoto, publicación, envío o despliegue",
+  "limits": [
+    "No prueba Flutter ni recorrido de IA real, CI/APK/aceptación del producto; Linux no ejecutado",
+    "Starlette 1.8.0 mantiene fallback HTTPX 0.28.1 deprecado; se filtra únicamente esa advertencia en pytest",
+    "JWT stateless: logout se resuelve en Flutter; no revocación por sesión antes de expiración",
+    "Consulta libre se envía literalmente al proveedor; la minimización se aplica al contexto agregado automático",
+    "Las bases/venvs sintéticos se conservan en rutas ignoradas; no hay limpieza de archivos previos"
+  ],
+  "construction_corrections": [
+    "Primera importación bloqueada por advertencia Starlette TestClient: compatibilidad comprobada y filtro específico documentado",
+    "Primer intento JUnit en entorno limpio no creó el padre de basetemp: corregido con guard que crea padres y rechaza rutas existentes",
+    "Se reforzó la matriz JWT para apuntar a usuarios existentes; canario confirmó que detecta un bypass"
+  ],
+  "sha256_sources": {
+    ".env.example": "cf5541228174a75a5383830e102308269fe0609a0366e1aeeb9368aa1354cb3e",
+    ".gitignore": "c810949b2a9972969345c64d2ba87768aa0da1cad53cb35e566e301dccbcfe37",
+    "README.md": "5b31902a556e227f955ee5708a878dd7a6f197f8042685881e1523d238b69d0a",
+    "app/__init__.py": "7df685d79f6288b3b471b8a923704b2e23afd3e917a318149225cae1c01ff97b",
+    "app/asistente.py": "b98b5a5dfd7658f9cc755342077ac0e2d9b65eca5b7fdb98e3026d3546db5711",
+    "app/auth.py": "8b81d5014c05ad79973f2be618bcb1f5357456deff6a6de099e6d6cf4addee3c",
+    "app/catalogo.py": "afbcfb018b06820d7aa448a0978d2b36e594cbacd2d82eacd87e3abd40dc30be",
+    "app/config.py": "cc6cdae7d4e0d8487c1b8b51e08fb0ddc3ac6ed7de1179bec102e231866a9d71",
+    "app/db.py": "1b93c4d839f88933529c0bf4495c1fb500fd0e504f2ce24d01f7efa0816c8f0f",
+    "app/habitos.py": "f63936c2a99f7f0b8ecfc15cd28e5d2ddcbe0f39ec63d889a8269cea641c41fa",
+    "app/main.py": "b9033b203328d20a2f09489cd4d1858f51f6928fe4a0e237cc6a9cd80af3f7c3",
+    "app/schemas.py": "1bbbc595f7f085ace49939b353c9d92c2609f573658ae2c87d17eda1f4a18a42",
+    "app/security.py": "2e86433d1d9b2f746003169ccb85d4ac630e635129b72a61722ae15adab2cd15",
+    "pyproject.toml": "639509940c00a5c4f428d99696074a4d29d709fbc0834f95c4b18d4c79f8c555",
+    "requirements.lock": "70d418f0d8128898efffdbb4071346eab86ca8e5b1df8e9229d882194c055c26",
+    "seeds/plantillas.json": "2feb4113ce05da189f2e15d590d265f56d00cda2617147161a085f66fcf12756",
+    "tests/conftest.py": "8a5fe5f9763d640cc3be3c0c3459ff3ef5fa4c59c1f368af025f5c550be31ebb",
+    "tests/test_asistente.py": "d14e0d577aab3fd23431cf601713f088d3fdaa5506ecc41bdc2e2ca384867d5c",
+    "tests/test_auth.py": "cf5874b99641c1ac0b92c2cacd923505e80b3b75d60348acfcacde02ebaf9862",
+    "tests/test_catalogo_db.py": "2fa540ba9026eed9e40b81ac1c6a0ffb4d79ab0cc63375e44fd827c07b0ba593",
+    "tests/test_config_errors.py": "cf8ffb8fc00bb44fab317a47b4607072269a300531640ebfbe4d3c805ec1c95a",
+    "tests/test_habitos.py": "a07ca92534b2ef2eebebf1ee53107e47814db518607f9504d03e93ffbc781d52",
+    "tests/test_loopback.py": "81ed3084c5fbac0d936ab28766bbc7d5f2d29546aa31e0dcff92aafa9b19db91",
+    "tests/tools/check_auth_canary.py": "ad5837d5841838fc203a079ebf58ec62a18a8fa22e8f43058cdb129e683d2a63",
+    "tests/tools/lock_dependencies.py": "f258caadbe189fe5c31379b1139bc8012fb0c56f7d87aa102a39073d1c02346c"
+  },
+  "coordinator_documentation_sanitization": {
+    "motivo": "Instrucciones del interprete convertidas a python3.12 estandar sin rutas privadas",
+    "archivo": "README.md",
+    "sha256_antes": "cf14cd91a1e8d0d2c7fb391b2296512da2f7fd8005fcea44201d91f1fd687af1",
+    "sha256_despues": "5b31902a556e227f955ee5708a878dd7a6f197f8042685881e1523d238b69d0a",
+    "efecto": "Solo documentacion; fuentes y pruebas sin cambios"
+  }
+}

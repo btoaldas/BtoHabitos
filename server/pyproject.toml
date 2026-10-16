@@ -1,0 +1,27 @@
+[project]
+name = "btohabitos-server"
+version = "0.1.0"
+description = "API local original de hábitos y tareas BtoHabitos"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.143.2",
+  "pydantic==2.14.1",
+  "httpx==0.28.1",
+  "PyJWT==2.15.1",
+  "uvicorn==0.54.0",
+  "email-validator==2.3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q -p no:cacheprovider"
+filterwarnings = [
+  "error",
+  # Starlette 1.8 mantiene el adaptador HTTPX 0.28 mientras migra su TestClient a httpx2.
+  "ignore:Using .httpx. with .starlette.testclient. is deprecated.*:starlette.exceptions.StarletteDeprecationWarning",
+]
+tmp_path_retention_policy = "all"

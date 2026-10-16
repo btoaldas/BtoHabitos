@@ -1,0 +1,23 @@
+[
+  {"id":1,"titulo":"Pausa de respiración","descripcion":"Dedique un momento tranquilo a observar su respiración sin prisa.","categoria":"bienestar","frecuencia":"diaria","tipo":"habito"},
+  {"id":2,"titulo":"Paseo breve","descripcion":"Reserve un espacio para caminar a su ritmo en un lugar cómodo.","categoria":"bienestar","frecuencia":"diaria","tipo":"habito"},
+  {"id":3,"titulo":"Descanso de pantalla","descripcion":"Interrumpa un momento el uso de pantallas y observe el entorno.","categoria":"bienestar","frecuencia":"diaria","tipo":"habito"},
+  {"id":4,"titulo":"Momento sin pantallas","descripcion":"Elija una actividad de ocio que pueda disfrutar sin una pantalla.","categoria":"bienestar","frecuencia":"diaria","tipo":"habito"},
+  {"id":5,"titulo":"Registrar algo agradable","descripcion":"Anote una experiencia cotidiana que le haya resultado agradable.","categoria":"bienestar","frecuencia":"diaria","tipo":"habito"},
+  {"id":6,"titulo":"Preparar un espacio tranquilo","descripcion":"Organice un rincón cómodo para descansar o realizar una actividad tranquila.","categoria":"bienestar","frecuencia":"semanal","tipo":"tarea"},
+  {"id":7,"titulo":"Planear tiempo libre","descripcion":"Elija un momento de la semana para una actividad que disfrute.","categoria":"bienestar","frecuencia":"semanal","tipo":"tarea"},
+  {"id":8,"titulo":"Elegir prioridades del día","descripcion":"Escriba hasta tres asuntos en los que desea concentrarse hoy.","categoria":"organizacion","frecuencia":"diaria","tipo":"habito"},
+  {"id":9,"titulo":"Ordenar el escritorio","descripcion":"Devuelva a su sitio los objetos del espacio de trabajo.","categoria":"organizacion","frecuencia":"diaria","tipo":"habito"},
+  {"id":10,"titulo":"Preparar el día siguiente","descripcion":"Revise lo que necesitará mañana y déjelo a mano.","categoria":"organizacion","frecuencia":"diaria","tipo":"habito"},
+  {"id":11,"titulo":"Revisar la agenda","descripcion":"Consulte sus compromisos y reserve tiempo para lo pendiente.","categoria":"organizacion","frecuencia":"diaria","tipo":"habito"},
+  {"id":12,"titulo":"Organizar una carpeta","descripcion":"Seleccione una carpeta de documentos y agrupe su contenido por tema.","categoria":"organizacion","frecuencia":"semanal","tipo":"tarea"},
+  {"id":13,"titulo":"Revisar pendientes semanales","descripcion":"Observe sus tareas y decida cuáles atender durante la semana.","categoria":"organizacion","frecuencia":"semanal","tipo":"tarea"},
+  {"id":14,"titulo":"Preparar una lista de compras","descripcion":"Anote los artículos que necesita antes de salir de compras.","categoria":"organizacion","frecuencia":"semanal","tipo":"tarea"},
+  {"id":15,"titulo":"Leer unas páginas","descripcion":"Reserve un momento para avanzar en una lectura elegida por usted.","categoria":"aprendizaje","frecuencia":"diaria","tipo":"habito"},
+  {"id":16,"titulo":"Practicar una palabra nueva","descripcion":"Elija una palabra de otro idioma y úsela en una frase propia.","categoria":"aprendizaje","frecuencia":"diaria","tipo":"habito"},
+  {"id":17,"titulo":"Anotar una pregunta","descripcion":"Escriba una pregunta sobre algo que le gustaría comprender mejor.","categoria":"aprendizaje","frecuencia":"diaria","tipo":"habito"},
+  {"id":18,"titulo":"Resumir lo aprendido","descripcion":"Explique con sus propias palabras una idea que haya aprendido hoy.","categoria":"aprendizaje","frecuencia":"diaria","tipo":"habito"},
+  {"id":19,"titulo":"Practicar una habilidad","descripcion":"Elija un ejercicio pequeño relacionado con una habilidad que desea desarrollar.","categoria":"aprendizaje","frecuencia":"diaria","tipo":"habito"},
+  {"id":20,"titulo":"Explorar un tema","descripcion":"Busque una fuente introductoria sobre un tema de su interés y tome notas.","categoria":"aprendizaje","frecuencia":"semanal","tipo":"tarea"},
+  {"id":21,"titulo":"Compartir una explicación","descripcion":"Prepare una explicación breve de una idea usando un ejemplo cotidiano.","categoria":"aprendizaje","frecuencia":"semanal","tipo":"tarea"}
+]

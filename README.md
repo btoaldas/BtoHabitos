@@ -2,7 +2,12 @@
 
 Aplicación original de formación personal para convertir hábitos y tareas cotidianas en una rutina propia. Es independiente de ExploraEC y no está autorizada para uso institucional o productivo.
 
-**Estado, 15 de octubre de 2026:** la app Flutter y el servidor están construidos e integrados en `main`. Análisis sin incidencias, 92 pruebas Flutter, 160 del servidor y 8 de auxiliares aprobadas. El recorrido web/API real comprobó catálogo, hábitos privados, favoritos, persistencia, dos cuentas y un proveedor de IA real configurado privadamente. El APK local pasó instalación, relanzamiento y aislamiento A→B→A; se verificaron 21 tarjetas y las tres pestañas. Alberto autorizó GitHub `btoaldas/BtoHabitos`, público, rama `main`; publicación, CI remota, APK público y aceptación final siguen en preparación.
+**Estado, 15 de octubre de 2026:** producto construido, validado y entregado en CEDIA a las **20:36**, como **Enviado para calificar — Sin calificar**. Repositorio público autorizado, rama `main`. Análisis sin incidencias; 92 pruebas Flutter, 160 del servidor y 8 de auxiliares aprobadas localmente y en GitHub Actions. El APK exacto de la release pasó instalación nueva, persistencia entre procesos, aislamiento de dos cuentas y asistente real en Android emulado.
+
+- [Historial y commits](https://github.com/btoaldas/BtoHabitos/commits/main/) · [CI verificada](https://github.com/btoaldas/BtoHabitos/actions/runs/38834146256).
+- [Release educativa v1.0.0](https://github.com/btoaldas/BtoHabitos/releases/tag/v1.0.0) · [Descargar APK](https://github.com/btoaldas/BtoHabitos/releases/download/v1.0.0/app-release.apk) · [Compilación de Actions](https://github.com/btoaldas/BtoHabitos/actions/runs/38834361906).
+- APK: 53 853 576 bytes; SHA-256 `6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8`.
+- [Recibo de entrega](evidence/l03/entrega-moodle.json) · [Matriz técnica](docs/specs/001-habitos/verificacion.md).
 
 ## Qué incluye
 
@@ -90,17 +95,17 @@ flutter run -d chrome --web-port=18311 --dart-define="API_BASE_URL=http://127.0.
 flutter build apk --release --no-pub --dart-define="API_BASE_URL=http://10.0.2.2:18310"
 ```
 
-CI corre las pruebas del servidor, auxiliares, análisis Flutter y pruebas Flutter en runners limpios ([flujo CI](.github/workflows/ci.yml)). El [flujo de APK](.github/workflows/release-apk.yml) repite calidad y construye un APK únicamente para una etiqueta `v*`; un disparo manual sin etiqueta no construye ni publica. La publicación usa GitHub Release y un artefacto `btohabitos-apk`. La configuración Android actual firma el APK release con la clave de depuración: es un artefacto educativo, no apto para distribución productiva. No se ha ejecutado CI remota ni se ha publicado APK desde este trabajo.
+CI corre las pruebas del servidor, auxiliares, análisis Flutter y pruebas Flutter en runners limpios ([flujo CI](.github/workflows/ci.yml)). El [flujo de APK](.github/workflows/release-apk.yml) repite calidad y construye un APK únicamente para una etiqueta `v*`; un disparo manual sin etiqueta no construye ni publica. La publicación usa GitHub Release y un artefacto `btohabitos-apk`. La configuración Android actual firma el APK release con la clave de depuración: es un artefacto educativo, no apto para distribución productiva. CI de main y de la etiqueta `v1.0.0`, y la compilación/publicación de APK, terminaron correctamente. La release apunta a `99acfecbac94fd8a0a54181239adbdc5a25c612d`; las revisiones documentales posteriores conservan las mismas fuentes ejecutables.
 
 ## Validación y límites
 
 La verificación local incluye UI/API/SQLite con cuentas sintéticas, persistencia entre procesos, aislamiento A/B y regresiones de sesión obsoleta. La IA real respondió consejos y propuestas: cancelar conservó los registros y confirmar creó uno. Una primera respuesta inválida del proveedor produjo un error legible y ninguna escritura; no se determinó su campo inválido. En R2 se comprobó también propuesta real, cancelación sin altas, confirmación de una alta temporal y eliminación confirmada únicamente de ese registro nuevo; los dos originales quedaron idénticos. El APK local conservó sesión y favorito en un proceso nuevo y pasó A→B→A, con A2/B0 y un consejo real visible. Las suites con respuestas simuladas no se presentan como prueba del modelo real.
 
-El APK local de prueba conserva una URI de compilación privada en sus tres ABI y no se publicará. El APK descargable se construirá con Actions en un runner limpio y se verificará por separado. Evidencia: [build local](evidence/l03/build-local.json), [recorrido Android](evidence/l03/resultado-android-local.json) y [ensayo temporal R2](evidence/l02/propuesta-temporal-r2.json).
+El APK local de prueba conserva una URI de compilación privada en sus tres ABI y no se publicará. El APK descargable se construyó con Actions en un runner limpio. La descarga independiente sin autenticación respondió HTTP 200 y coincidió con el digest de GitHub; firma, CRC ZIP y privacidad verificados. Se instaló esa descarga exacta en un emulador nuevo: el hash instalado coincide, sesión y favorito persisten en un proceso nuevo, B permanece aislado y el consejo real no crea hábitos. Prueba en emulador, sin prueba en teléfono físico. Véanse [descarga pública](evidence/l03/descarga-apk-ci.json), [aceptación del APK CI](evidence/l03/resultado-apk-ci.json) y [capturas nativas](evidence/l03/capturas-apk-ci/manifiesto.json). Evidencia: [build local](evidence/l03/build-local.json), [recorrido Android](evidence/l03/resultado-android-local.json) y [ensayo temporal R2](evidence/l02/propuesta-temporal-r2.json).
 
-Referencias de ejecución: [evidencia](evidence/README.md), [plan](docs/specs/001-habitos/plan.md), [tareas](docs/specs/001-habitos/tasks.md) y [encargo de integración](docs/encargos/03-integracion-entrega.md). El lote CI/documentación/herramientas no ha sido aún aceptado por el coordinador.
+Referencias de ejecución: [evidencia](evidence/README.md), [plan](docs/specs/001-habitos/plan.md), [tareas](docs/specs/001-habitos/tasks.md) y [encargo de integración](docs/encargos/03-integracion-entrega.md). La aceptación técnica del coordinador está cerrada y las 21 tareas tienen evidencia. La calificación docente permanece pendiente en el aula.
 
-Capturas del recorrido web real con R2; no sustituyen la prueba Android pendiente. Sus bytes y hashes están en el [manifiesto de capturas](evidence/l02/capturas-web/manifiesto.json).
+Capturas del recorrido web real con R2, complementarias a la aceptación Android de la release ya comprobada. Sus bytes y hashes están en el [manifiesto de capturas](evidence/l02/capturas-web/manifiesto.json).
 
 ![Hábitos propios restaurados después de relanzar la aplicación](evidence/l02/capturas-web/r2-habitos-restaurados.png)
 

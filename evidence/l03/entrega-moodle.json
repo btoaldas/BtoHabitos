@@ -1,0 +1,19 @@
+{
+  "plataforma": "CEDIA",
+  "actividad": 49762,
+  "url_tarea": "https://cursos.cedia.org.ec/mod/assign/view.php?id=49762",
+  "fecha_local": "2026-10-15",
+  "hora_ultima_modificacion": "20:36",
+  "zona_horaria": "America/Guayaquil",
+  "estado_entrega": "Enviado para calificar",
+  "estado_calificacion": "Sin calificar",
+  "texto_en_linea": "https://github.com/btoaldas/BtoHabitos",
+  "verificacion_ui_y_recarga": true,
+  "cuenta_correcta_verificada": true,
+  "release": "https://github.com/btoaldas/BtoHabitos/releases/tag/v1.0.0",
+  "ci_main": 38834146256,
+  "ci_release": 38834361906,
+  "apk_ci_sha256": "6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8",
+  "prueba_apk_ci": "PASS; emulador nuevo 5560; sesión/favorito entre procesos; A/B; asistente; cero errores",
+  "constancia": "Captura y documento conservados privadamente; estados verificados en la interfaz después de recargar."
+}

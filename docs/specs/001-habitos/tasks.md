@@ -1,6 +1,6 @@
 # Tareas S001 — BtoHabitos
 
-- Estado: Local funcional verificado; CI, APK final de CI y Moodle pendientes
+- Estado: **validado y entregado técnicamente** (fuentes públicas `99acfec`); Moodle enviado el 2026-10-15 20:36, **Sin calificar**
 - Aprobado por: Alberto — 2026-10-15 — «Apruebo BtoHabitos, el plan y las tareas»
 
 ## L01 — Cuenta, catálogo y CRUD
@@ -27,11 +27,11 @@
 ## L03 — Calidad, integración y entrega
 
 - [x] T16 (RF-06, RNF-03) Completar errores y accesibilidad en `lib/widgets/estado_operacion.dart`, `test/estados_widget_test.dart`. Evidencia esperada: escenarios 400/401/422/5xx/red/timeout en español, cargas terminan, recuperación real y controles48×48. Evidencia local: [estados](../../../test/estados_widget_test.dart), [medición 48×48](../../../test/support/widget_helpers.dart), [matriz de controladores](../../../test/asistente_test.dart).
-- [ ] T17 (RF-07, RNF-04) Crear CI y release en `.github/workflows/ci.yml`, `.github/workflows/release-apk.yml`; Evidencia esperada: análisis/suites/build en copia limpia; tag v* produce APK descargable sin secretos y pruebas fallidas bloquean release.
-- [x] T18 (RF-07, RNF-01, RNF-04) Completar documentación y entorno en `README.md`, `server/.env.example`, `docs/adr/001-arquitectura.md`. Evidencia esperada: comandos copiados y ejecutados desde copia limpia, créditos reales y secreto ausente en Git/APK. Evidencia local: [README](../../../README.md), [ADR](../../adr/001-arquitectura.md), [escaneo saneado del APK local](../../../evidence/l03/build-local.json). El APK local no contiene archivos secretos ni patrones de clave detectados, pero sí URI privada: su publicación queda excluida y el artefacto final depende de T17/T20.
+- [x] T17 (RF-07, RNF-04) Crear CI y release en `.github/workflows/ci.yml`, `.github/workflows/release-apk.yml`; Evidencia: CI main run [38834146256](https://github.com/btoaldas/BtoHabitos/actions/runs/38834146256), CI tag [38834361808](https://github.com/btoaldas/BtoHabitos/actions/runs/38834361808) y Release [38834361906](https://github.com/btoaldas/BtoHabitos/actions/runs/38834361906), todos correctos; [release v1.0.0](https://github.com/btoaldas/BtoHabitos/releases/tag/v1.0.0), [APK CI](../../../evidence/l03/resultado-apk-ci.json), [descarga/privacidad](../../../evidence/l03/descarga-apk-ci.json).
+- [x] T18 (RF-07, RNF-01, RNF-04) Completar documentación y entorno en `README.md`, `server/.env.example`, `docs/adr/001-arquitectura.md`. Evidencia esperada: comandos copiados y ejecutados desde copia limpia, créditos reales y secreto ausente en Git/APK. Evidencia local: [README](../../../README.md), [ADR](../../adr/001-arquitectura.md), [escaneo saneado del APK local](../../../evidence/l03/build-local.json). El APK local no contiene archivos secretos ni patrones de clave detectados, pero sí URI privada: su publicación queda excluida. El APK público de CI limpio está verificado en T17/T20.
 - [x] T19 (RF-01, RF-02, RF-03, RF-04, RF-05, RF-06, RNF-02, RNF-04) Ejecutar aceptación integrada con evidencia canónica [L01](../../../evidence/l01/resultado.json), [L02](../../../evidence/l02/asistente-real.json) y [Android](../../../evidence/l03/resultado-android-local.json); Evidencia esperada: suites/análisis verdes y recorrido real de dos cuentas con DB, persistencia, proveedor y pruebas de carreras controladas; no repetir suites concurrentemente.
-- [ ] T20 (RF-07, RNF-03, RNF-04) APK local instalado, relanzado y recorrido nativo; [resultado Android](../../../evidence/l03/resultado-android-local.json). APK final CI pendiente; capturas web saneadas referenciadas en L02. Evidencia esperada: APK release instalado, relanzado y recorrido documentado; capturas de la versión exacta sin credenciales.
-- [ ] T21 (RF-07, RNF-01, RNF-04) Completar matriz local en `docs/specs/001-habitos/verificacion.md`; aceptación final y Moodle dependen del APK de CI y gates externos. Evidencia esperada: RF→casos→resultados→commit, límites explícitos y enlace de release; publicación/envío solo por coordinador con destino autorizado.
+- [x] T20 (RF-07, RNF-03, RNF-04) APK local instalado, relanzado y recorrido nativo; [resultado Android](../../../evidence/l03/resultado-android-local.json). APK release CI v1.0.0 descargado, hash instalado coincidente, firma válida, instalación nueva y relanzamiento PID 5195→5609; A 2 hábitos/2 completados, B aislado y retorno A con favorito. [Resultado APK CI](../../../evidence/l03/resultado-apk-ci.json), [descarga independiente](../../../evidence/l03/descarga-apk-ci.json). Prueba en emulador, no dispositivo físico.
+- [x] T21 (RF-07, RNF-01, RNF-04) Cerrar matriz técnica en `docs/specs/001-habitos/verificacion.md` y registrar el hito [validado](../../hitos/2026-10-15-producto-validado.md). Recibo de Moodle: envío 2026-10-15 20:36, estado “Enviado para calificar”, calificación “Sin calificar”; [recibo saneado](../../../evidence/l03/entrega-moodle.json).
 
 
 ## Aprobación del paquete el 15 de octubre de 2026
@@ -39,10 +39,10 @@
 Alberto aprobó conjuntamente el alcance, el plan y las tareas con la respuesta explícita «Apruebo BtoHabitos, el plan y las tareas». Se autoriza iniciar la construcción local; esta aprobación no registra todavía aceptación de resultados ni publicación de un remoto nuevo.
 
 
-## Estado de consolidación local — 15 de octubre de 2026
+## Estado final — 15 de octubre de 2026
 
-Estado: **local funcional verificado; entrega final pendiente**. T01–T16, T18–T19 satisfechas localmente según fuentes enlazadas en cada tarea. T12 se cubrió con dos procesos Android nativos y JSON versionable, sin crear herramienta Dart duplicada. T17 queda pendiente de CI y APK de runner limpio; el workflow release usa `release-apk.yml`. T20: APK local ya instalado y recorrido; queda el APK final CI. T21: matriz local consolidada; faltan CI, artefacto final y entrega Moodle. La autorización para publicar el repositorio público está concedida; la ejecuta el coordinador.
+Estado: **validado y entregado técnicamente**. T01–T21 satisfechas con evidencia local, CI, APK de release y recibo Moodle enlazados en las tareas. La aceptación técnica del coordinador está cerrada; la calificación del docente sigue externa y **Sin calificar**, no es un pendiente de construcción. El repositorio público y release están disponibles.
 
-Desviaciones de artefactos: T17 implementa `release-apk.yml` en lugar del `release.yml` previsto. T19 consolida L01, L02 y `evidence/l03/resultado-android-local.json` en lugar de crear otro resumen `evidence/l03/resultado.json`. Las capturas web saneadas están en `evidence/l02/capturas-web/`; T20 conserva pendiente la comprobación del artefacto final de CI.
+Desviaciones de artefactos: T17 implementa `release-apk.yml` en lugar del `release.yml` previsto. T19 consolida L01, L02 y `evidence/l03/resultado-android-local.json` en lugar de crear otro resumen `evidence/l03/resultado.json`. Las capturas web saneadas están en `evidence/l02/capturas-web/`; T20 incluye la descarga pública, instalación nueva y relanzamiento del artefacto final de CI ya comprobados.
 
-Remoto público creado: https://github.com/btoaldas/BtoHabitos. Push, CI, artefacto final y Moodle siguen pendientes del coordinador. La observación posterior del dato sintético ID 2 está registrada en la matriz y L01, sin alterar los recibos históricos ni atribuir causa no confirmada.
+Remoto público creado: https://github.com/btoaldas/BtoHabitos. La publicación, CI, release y envío Moodle están acreditados por recibos; no se atribuye nota ni aceptación docente. La variación observada del dato sintético ID 2 (cierre local 2/1; observación posterior 2/2) se conserva sin alterar recibos históricos ni atribuir causa.

@@ -1,0 +1,36 @@
+{
+  "origen": "APK exacto de GitHub Actions v1.0.0; emulador Android nuevo; capturas completas sin editar",
+  "sha256_apk": "6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8",
+  "archivos": [
+    {
+      "archivo": "01-catalogo-A.png",
+      "sha256": "98d828c4a6671bc7d04226a26cc717a4a5194117671f420dd8cce642c936b2c1"
+    },
+    {
+      "archivo": "02-habitos-A.png",
+      "sha256": "3bb2cce04f851daa2256e2643eacf41fa4fc35ecaa2d935a3b50edafb2fa659c"
+    },
+    {
+      "archivo": "03-favorito-A-persistente.png",
+      "sha256": "a4b4f6602dc1224028f449749ff3dcf49ef74accaf70fa6bd0f004ca9eef6bbe"
+    },
+    {
+      "archivo": "04-habitos-B-0.png",
+      "sha256": "e13a9239c24b3e4db46e3af46cffe13a6b0ef303adf28af3f8e1a7abb41a9221"
+    },
+    {
+      "archivo": "05-favorito-A-retorno.png",
+      "sha256": "961b4f3082a0689c50cd7986d2da84c3f6e11fd428ae69bbced7ff2d4e11c9fe"
+    },
+    {
+      "archivo": "06-asistente-consejo.png",
+      "sha256": "e8129623e64a2f995029ea5b2215ad89353f6f525e7c628ae3ae9d0b54f313bc"
+    }
+  ],
+  "revision_visual_coordinador": [
+    "01-catalogo-A.png",
+    "04-habitos-B-0.png",
+    "06-asistente-consejo.png"
+  ],
+  "privacidad": "Sin credenciales ni rutas privadas visibles"
+}

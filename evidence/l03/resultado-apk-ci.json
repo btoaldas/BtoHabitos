@@ -1,0 +1,91 @@
+{
+  "estado": "PASS",
+  "hora_ecuador": "2026-10-15T20:36:16.525817-05:00",
+  "apk": {
+    "paquete": "com.bto.habitos",
+    "serial": "emulator-5560",
+    "apk": "app-release.apk",
+    "bytes": 53853576,
+    "sha256": "6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8",
+    "sha256_instalado": "6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8",
+    "coincide": true,
+    "origen": "GitHub Actions Release v1.0.0",
+    "run": 38834361906,
+    "asset": 645748822,
+    "commit_indicado": "99acfec",
+    "firma_valida": true,
+    "instalacion": "Paquete ausente; adb install sin -r"
+  },
+  "relanzamiento": {
+    "serial": "emulator-5560",
+    "paquete": "com.bto.habitos",
+    "pid_anterior": "5195",
+    "pid_nuevo": "5609",
+    "proceso_nuevo": true,
+    "salida": "Starting: Intent { cmp=com.bto.habitos/.MainActivity }\nStatus: ok\nLaunchState: COLD\nActivity: com.bto.habitos/.MainActivity\nTotalTime: 1632\nWaitTime: 1647\nComplete",
+    "datos_borrados": false
+  },
+  "pruebas": {
+    "login_A_B": true,
+    "catalogo_header": 21,
+    "favoritos_A_inicial": 0,
+    "favoritos_A_guardado_y_persistente": 1,
+    "A_habitos_antes_despues": 2,
+    "A_completados_antes_despues": 2,
+    "B_habitos": 0,
+    "B_favoritos": 0,
+    "B_asistente_sin_consulta_respuesta_A": true,
+    "retorno_A_favoritos": 1,
+    "consejo_consulta_observada": "Solo dame un consejo breve para organizar el estudio, sin proponer ni create habitos.",
+    "consejo_respuesta": "Usa la técnica Pomodoro: 25 minutos de estudio enfocado seguidos de 5 minutos de descanso para mantener la concentración y evitar el agotamiento.",
+    "consulta_IA": 1,
+    "propuestas_confirmadas": 0,
+    "habitos_creados_editados_eliminados": 0,
+    "errores_app": 0
+  },
+  "metodo": "Emulador nuevo y aislado 5560. SDK adb y UIAutomator; coordenadas originales del XML, registro UTC de taps y capturas nativas. Hash del APK instalado comprobado.",
+  "conservacion": [
+    "Emulador 5558 y aplicaciones anteriores preservados.",
+    "Sin reinstalación, wipe ni borrado de datos.",
+    "Sin cambios de fuentes, servicios, SCM ni credenciales.",
+    "Estado actual A 2/2 preservado sin atribuir su cambio previo al código."
+  ],
+  "limites": [
+    "Prueba en emulador, no dispositivo físico.",
+    "El origen real del proveedor se complementa con la verificación del coordinador; no se leyeron JWT ni claves de proveedor."
+  ],
+  "capturas": [
+    {
+      "archivo": "01-catalogo-A.png",
+      "sha256": "98d828c4a6671bc7d04226a26cc717a4a5194117671f420dd8cce642c936b2c1"
+    },
+    {
+      "archivo": "02-habitos-A.png",
+      "sha256": "3bb2cce04f851daa2256e2643eacf41fa4fc35ecaa2d935a3b50edafb2fa659c"
+    },
+    {
+      "archivo": "03-favorito-A-persistente.png",
+      "sha256": "a4b4f6602dc1224028f449749ff3dcf49ef74accaf70fa6bd0f004ca9eef6bbe"
+    },
+    {
+      "archivo": "04-habitos-B-0.png",
+      "sha256": "e13a9239c24b3e4db46e3af46cffe13a6b0ef303adf28af3f8e1a7abb41a9221"
+    },
+    {
+      "archivo": "05-favorito-A-retorno.png",
+      "sha256": "961b4f3082a0689c50cd7986d2da84c3f6e11fd428ae69bbced7ff2d4e11c9fe"
+    },
+    {
+      "archivo": "06-asistente-consejo.png",
+      "sha256": "e8129623e64a2f995029ea5b2215ad89353f6f525e7c628ae3ae9d0b54f313bc"
+    }
+  ],
+  "privacidad": {
+    "estado": "PASS",
+    "archivos": 34,
+    "sin_credenciales_fixture": true,
+    "sin_rutas_privadas_host": true,
+    "sin_lectura_de_JWT_proveedor": true
+  },
+  "cierre_UI_hora_ecuador": "2026-10-15T20:35:14.188322-05:00"
+}

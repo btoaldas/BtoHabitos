@@ -1,7 +1,7 @@
 {
   "fecha_local": "2026-10-15",
-  "estado": "local funcional verificado; entrega final pendiente de CI, APK final CI y Moodle",
-  "fuentes_commit": "9ffd795deef718901556191c8a6c66583df3c607",
+  "estado": "validado y entregado técnicamente; aceptación docente pendiente externa (Sin calificar)",
+  "fuentes_commit": "99acfecbac94fd8a0a54181239adbdc5a25c612d",
   "suites_reportadas": {
     "servidor": "160/160",
     "flutter": "92/92",
@@ -47,17 +47,17 @@
     "accion": "usar APK construido por CI limpia",
     "fuente": "evidence/l03/build-local.json"
   },
-  "pendientes": [
-    "CI remota",
-    "APK final de CI limpio, descargable y verificable",
-    "entrega Moodle"
-  ],
+  "pendientes": [],
   "publicacion_repositorio": {
     "url": "https://github.com/btoaldas/BtoHabitos",
     "visibilidad": "público",
     "autorizacion": "explícita de Alberto",
     "remoto_creado": true,
-    "push": "pendiente"
+    "push": "publicado en main; fuentes 99acfec",
+    "ci_main": 38834146256,
+    "ci_tag": 38834361808,
+    "release_run": 38834361906,
+    "release": "https://github.com/btoaldas/BtoHabitos/releases/tag/v1.0.0"
   },
   "observacion_posterior": {
     "fecha_local": "2026-10-15T20:06:26-05:00",
@@ -67,8 +67,42 @@
       "habitos": 2,
       "completados": 2
     },
-    "causa": "en investigación; no se atribuye bug",
-    "recibos_historicos": "Android 20:02:39: 2/1; web fixture 20:04:37: dos originales idénticos y 1 completado; sin modificaciones retrospectivas",
-    "capturas_android": "PNG originales, sin recorte, según revisión independiente reportada"
-  }
+    "causa": "no atribuida; no se infiere bug automático ni intervención de persona",
+    "recibos_historicos": "Android local 20:02:39: 2 hábitos/1 completado; ensayo web 20:04:37: dos originales idénticos/1 completado. Se preservan sin cambios. APK CI 20:35:14: 2 hábitos/2 completados.",
+    "capturas_android": "PNG originales, sin recorte, según revisión independiente reportada",
+    "origen": "No atribuido. La revisión visual empezó a las 20:08:45, después del cambio observado a las 20:06:26; taps en navegación, no en checkbox. No se infiere causa automática ni persona."
+  },
+  "apk_release_ci": {
+    "fuente": "evidence/l03/resultado-apk-ci.json",
+    "release": "https://github.com/btoaldas/BtoHabitos/releases/tag/v1.0.0",
+    "workflow_runs": {
+      "ci_main": 38834146256,
+      "ci_tag": 38834361808,
+      "release": 38834361906
+    },
+    "bytes": 53853576,
+    "sha256": "6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8",
+    "descarga_publica_independiente_http": 200,
+    "hash_descarga_coincide": true,
+    "zip_crc": "PASS",
+    "privacidad": "sin archivos privados, rutas privadas del host ni secretos reales detectados",
+    "firma_valida_instalacion_nueva_emulador": "PASS",
+    "pid_relanzamiento": "5195→5609",
+    "persistencia": "A: 2 hábitos/2 completados/favorito 1; B: 0 hábitos/0 favoritos; retorno A: favorito 1",
+    "errores_app": 0
+  },
+  "entrega_moodle": {
+    "fuente": "evidence/l03/entrega-moodle.json",
+    "actividad": 49762,
+    "hora_local": "2026-10-15T20:36",
+    "estado": "Enviado para calificar",
+    "calificacion": "Sin calificar",
+    "verificacion_ui_y_recarga": true
+  },
+  "aceptacion_tecnica": {
+    "estado": "aceptado técnicamente por el coordinador",
+    "aceptacion_docente": false,
+    "calificacion": "Sin calificar"
+  },
+  "fuentes_commit_cierre_local": "9ffd795deef718901556191c8a6c66583df3c607"
 }

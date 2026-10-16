@@ -1,6 +1,6 @@
 # Publicación y entrega preparadas — 15 de octubre de 2026
 
-Estado: preparación local con publicación autorizada. El manifiesto describe la operación; las comprobaciones remotas se registrarán después de ejecutarla.
+Estado: operación autorizada y ejecutada; publicación, APK de CI, aceptación técnica y entrega Moodle comprobados. El plan inicial se conserva y los resultados se registran al final.
 
 ## Destino propuesto y autoridad
 
@@ -32,3 +32,12 @@ El APK es educativo, versión `1.0.0+1`, firmado con la clave de depuración seg
 ## Recuperación y límites
 
 Conservar commits, artefactos y evidencias anteriores. Si una comprobación falla, detener el paso dependiente y registrar el motivo. Corregir mediante commits y versiones nuevas. Este manifiesto no autoriza borrar remotos, retirar releases, reescribir historia ni reemplazar recursos existentes.
+
+## Resultado ejecutado y comprobado
+
+- Repositorio público `https://github.com/btoaldas/BtoHabitos`, rama `main`, historia real publicada; release `v1.0.0` sobre `99acfecbac94fd8a0a54181239adbdc5a25c612d`.
+- CI main 38834146256, CI tag 38834361808 y Release 38834361906: success. APK público de 53 853 576 bytes, SHA-256 `6a947d78234922d7d9fcab06030282ee37ad8c7c1e7ea0d0d2fa8713cc766be8`. Dos descargas coincidentes, una anónima HTTP 200; firma, CRC ZIP y privacidad comprobadas.
+- APK descargado exacto instalado sin reemplazar aplicaciones en un emulador nuevo. Relanzamiento en proceso nuevo, sesión/favorito, A/B y asistente real: PASS, cero errores de app. [Recibo](../../evidence/l03/resultado-apk-ci.json).
+- Moodle actividad 49762: enlace exacto del repositorio guardado por formulario y verificado después de recargar; última modificación 2026-10-15 20:36, Enviado para calificar, Sin calificar. [Constancia saneada](../../evidence/l03/entrega-moodle.json).
+- Captura y Word final de cinco páginas y once enlaces enviados únicamente al grupo privado autorizado de cuatro personas. Salida confirmada por identificador y eco; lectura sin confirmar. Los identificadores, documentos y captura permanecen en el respaldo privado, fuera de Git.
+- No se reemplazó el APK local ni se reescribió la historia. Los recursos y recibos anteriores se conservan; las revisiones documentales no alteran la versión de la release.

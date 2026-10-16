@@ -1,6 +1,6 @@
 {
   "fecha_local": "2026-10-15",
-  "estado": "asistente real validado localmente; entrega final pendiente de CI, APK final CI y Moodle",
+  "estado": "asistente real validado localmente y en APK CI de release; entregado técnicamente; Moodle Sin calificar",
   "api": {
     "primera_pasada": {
       "http": 502,
@@ -49,14 +49,41 @@
   "limites": [
     "el 502 no tiene causa determinada",
     "no se infiere relación entre consultas API y UI",
-    "el APK local no es publicable; requiere compilación CI limpia"
+    "el APK local permanece excluido; la entrega usa el APK de CI limpio ya validado"
   ],
-  "pendientes": [
-    "CI remota",
-    "APK final CI limpio, descargable y verificable",
-    "entrega Moodle"
-  ],
+  "pendientes": [],
   "modelo_ui_web_r2": "glm-4.5-air",
   "proveedor_api": "https://api.z.ai/api/paas/v4",
-  "observacion_posterior": "La variación posterior del hábito sintético ID 2 (20:06:26) está en investigación y registrada en L01; no altera el recibo de esta operación ni permite atribuir causa."
+  "observacion_posterior": "La variación del hábito sintético ID 2 a las 20:06:26 conserva origen no atribuido y está registrada en L01; no altera los recibos históricos ni constituye un pendiente de construcción.",
+  "apk_ci": {
+    "fuente": "evidence/l03/resultado-apk-ci.json",
+    "consejo_visible": true,
+    "cuenta_A_habitos_antes_despues": [
+      2,
+      2
+    ],
+    "cuenta_A_completados_antes_despues": [
+      2,
+      2
+    ],
+    "altas_por_consejo": 0,
+    "cuenta_B_habitos": 0,
+    "cuenta_B_favoritos": 0,
+    "errores_app": 0
+  },
+  "entrega_moodle": {
+    "fuente": "evidence/l03/entrega-moodle.json",
+    "estado": "Enviado para calificar",
+    "calificacion": "Sin calificar",
+    "hora_local": "2026-10-15T20:36"
+  },
+  "observacion_dato_sintetico": {
+    "id": 2,
+    "recibo_local_android": "20:02:39, 2 hábitos/1 completado",
+    "recibo_web": "20:04:37, dos originales idénticos y 1 completado",
+    "observacion_posterior": "20:06:26, cambio false→true, sin causa atribuida",
+    "revision_visual": "inició 20:08:45; taps de navegación no apuntan al checkbox",
+    "apk_ci": "20:35:14, 2 hábitos/2 completados",
+    "nota": "Se conservan los recibos históricos; no se infiere bug automático ni causa/persona."
+  }
 }

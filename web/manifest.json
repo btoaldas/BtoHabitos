@@ -1,0 +1,19 @@
+{
+  "name": "BtoHábitos",
+  "short_name": "BtoHábitos",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#176B61",
+  "theme_color": "#176B61",
+  "description": "Hábitos y tareas cotidianas.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

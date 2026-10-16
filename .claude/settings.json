@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter analyze --no-pub)",
+      "Bash(flutter test --no-pub)",
+      "Bash(python3.12 -m unittest discover -s tool -p 'test_*.py' -v)",
+      "Bash(python3.12 -m py_compile tool/prepare_env.py tool/run_server.py tool/test_prepare_env.py)"
+    ]
+  }
+}

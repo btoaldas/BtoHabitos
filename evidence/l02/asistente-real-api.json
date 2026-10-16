@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-16T00:22:16.746948+00:00",
+  "etapa": "API real; interfaz todavía pendiente",
+  "modelo_configurado": "glm-4.5-air",
+  "proveedor": "https://api.z.ai/api/paas/v4",
+  "registro_http_previo": 201,
+  "login_http": 200,
+  "plantillas": 21,
+  "asistente_http": 502,
+  "duracion_segundos": 2.124,
+  "habitos_antes": 0,
+  "habitos_despues": 0,
+  "mutaciones_asistente": 0,
+  "error_legible": "El proveedor de IA devolvió una respuesta inválida o incompleta"
+}

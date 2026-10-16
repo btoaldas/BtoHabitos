@@ -35,10 +35,23 @@ class SecureTokenStorage {
 
   Future<void> write(String token, bool Function() valid) =>
       _queue.run(() async {
-        if (valid()) await driver.write(token);
+        if (!valid()) return;
+        try {
+          await driver.write(token);
+        } finally {
+          // La escritura nativa no se puede cancelar. Si perdió su sesión,
+          // retirarla antes de soltar la cola: ninguna lectura ni credencial
+          // posterior puede adelantarse a esta compensación.
+          if (!valid()) await driver.delete();
+        }
       });
 
-  Future<void> clear(bool Function() valid) => _queue.run(() async {
-    if (valid()) await driver.delete();
-  });
+  Future<void> clear(bool Function() valid) {
+    // Se acepta la revocación ahora. Un restore posterior no puede anularla;
+    // una escritura nueva queda detrás del borrado en la misma cola FIFO.
+    // Una petición que ya llega obsoleta (p. ej. un 401 de A tras login B)
+    // sigue sin tener autoridad para retirar la credencial actual.
+    if (!valid()) return Future<void>.value();
+    return _queue.run(driver.delete);
+  }
 }

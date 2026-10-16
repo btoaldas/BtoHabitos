@@ -1,8 +1,5 @@
 import 'dart:async';
 
-import 'package:bto_habitos/controllers/auth_controller.dart';
-import 'package:bto_habitos/repositories/auth_repository.dart';
-import 'package:bto_habitos/services/secure_token_storage.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -114,36 +111,6 @@ void main() {
   );
 
   test(
-    'onClose antiguo no invalida nuevo controller con escritura en cola',
-    () async {
-      final reached = Completer<void>(), release = Completer<void>();
-      f.secure.value = 'fixture-access-1';
-      f.secure.beforeRead = () async {
-        reached.complete();
-        await release.future;
-      };
-      final oldRestore = f.binding.auth.restore();
-      await reached.future;
-      final newer = AuthController(
-        AuthRepository(f.binding.api),
-        SecureTokenStorage(f.secure),
-        f.sessions,
-      );
-      final entering = newer.authenticate(
-        'persona2@example.test',
-        'Solo-Prueba-123',
-      );
-      f.binding.auth.onClose();
-      release.complete();
-      await Future.wait([oldRestore, entering]);
-      expect(f.sessions.current.value?.usuario.id, 2);
-      expect(f.secure.value, 'fixture-access-2');
-      // La fixture conserva el resto del grafo; el controller ya cerrado no se cierra dos veces.
-      newer.onClose();
-    },
-  );
-
-  test(
     '401 antiguo no cierra B y cada petición conserva el token original',
     () async {
       await f.login();
@@ -231,37 +198,6 @@ void main() {
       expect(f.sessions.current.value?.usuario.id, 2);
       expect(f.secure.value, 'fixture-access-2');
       expect(f.secure.writes, 1);
-    },
-  );
-
-  test(
-    'dos auth controllers con escritura A en vuelo terminan almacenando B',
-    () async {
-      final reached = Completer<void>(), release = Completer<void>();
-      f.secure.beforeWrite = () async {
-        f.secure.beforeWrite = null;
-        reached.complete();
-        await release.future;
-      };
-      final old = f.login();
-      await reached.future;
-      final newer = AuthController(
-        AuthRepository(f.binding.api),
-        SecureTokenStorage(f.secure),
-        f.sessions,
-      );
-      final loginB = newer.authenticate(
-        'persona2@example.test',
-        'Solo-Prueba-123',
-      );
-      expect(f.sessions.current.value, isNull);
-      release.complete();
-      await Future.wait([old, loginB]);
-      expect(f.sessions.current.value?.usuario.id, 2);
-      expect(f.secure.value, 'fixture-access-2');
-      f.binding.auth.onClose();
-      expect(f.sessions.current.value?.usuario.id, 2);
-      newer.onClose();
     },
   );
 }

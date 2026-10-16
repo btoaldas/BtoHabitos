@@ -1,0 +1,32 @@
+{
+  "fecha_utc": "2026-10-16T00:35:23.417935+00:00",
+  "nivel": "API real del servidor con proveedor remoto; interfaz pendiente",
+  "consultas": [
+    {
+      "http": 200,
+      "segundos": 2.035,
+      "respuesta": {
+        "tipo": "consejo",
+        "mensaje": "Divide tu tiempo de estudio en bloques de 25-30 minutos con descansos breves para mantener la concentración y evitar el agotamiento."
+      }
+    },
+    {
+      "http": 200,
+      "segundos": 1.868,
+      "respuesta": {
+        "tipo": "propuesta",
+        "mensaje": "Aquí tienes una propuesta para integrar Flutter en tu rutina diaria.",
+        "habito": {
+          "titulo": "Práctica diaria de Flutter",
+          "descripcion": "Dedica 20 minutos cada día para practicar programación con Flutter, ya sea creando pequeños widgets, resolviendo ejercicios o siguiendo tutoriales.",
+          "categoria": "aprendizaje",
+          "frecuencia": "diaria",
+          "tipo": "habito"
+        }
+      }
+    }
+  ],
+  "habitos_antes": 0,
+  "habitos_despues": 0,
+  "sin_escritura": true
+}
